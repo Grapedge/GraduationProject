@@ -1,0 +1,20 @@
+{
+  "name": "grapes-design",
+  "private": true,
+  "description": "My graduation project",
+  "author": "Grapedge <grapedge@gmail.com>",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "echo start",
+    "build": "echo build",
+    "lint": "echo lint",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1"
+  }
+}
