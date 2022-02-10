@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "echo start",
+    "start": "yarn workspace app dev",
     "build": "echo build",
     "lint": "echo lint",
     "test": "jest"
