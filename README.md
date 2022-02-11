@@ -30,3 +30,15 @@ Summary：毕业设计项目。
 - 0210-0320: 端点模型相关
 - 0320-0410: 可视化搭建相关
 - 0410-0420: 面向演示编程.jpg
+
+## 项目结构概述
+
+暂定：
+
+- app: 主应用
+- canvas: JSX 画布，用于拖放 UI，绑定查询
+- model-editor：模型编辑器
+- browser-fs：模拟 node fs
+- sandbox: 代码沙盒，用于渲染 JSX 代码
+- query：数据获取库
+- server：Node 服务器
