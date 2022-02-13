@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "start": "yarn workspace app dev",
-    "build": "echo build",
+    "build": "yarn workspaces run build",
     "lint": "echo lint",
     "test": "jest"
   },
