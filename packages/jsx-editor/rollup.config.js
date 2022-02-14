@@ -2,6 +2,7 @@ import { defineConfig } from 'rollup'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import typescript from '@rollup/plugin-typescript'
 import postcss from 'rollup-plugin-postcss'
+import commonjs from '@rollup/plugin-commonjs'
 import packageJson from './package.json'
 
 export default defineConfig({
@@ -18,5 +19,5 @@ export default defineConfig({
       sourcemap: true,
     },
   ],
-  plugins: [peerDepsExternal(), typescript(), postcss()],
+  plugins: [peerDepsExternal(), typescript(), commonjs(), postcss()],
 })
