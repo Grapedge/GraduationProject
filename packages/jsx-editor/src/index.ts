@@ -11,6 +11,4 @@ const ast = template.ast(ReactCode, {
   plugins: ['jsx'],
 })
 
-console.log('run in browser!')
-
 export default ast
