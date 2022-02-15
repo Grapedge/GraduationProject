@@ -15,7 +15,9 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@babel/helper-plugin-utils": "^7.16.7",
     "@babel/plugin-syntax-jsx": "^7.16.7",
+    "@babel/plugin-transform-react-jsx": "7.10.3",
     "@babel/standalone": "^7.17.2",
     "@babel/template": "^7.16.7",
     "@babel/traverse": "^7.17.0",
@@ -31,6 +33,8 @@
   "devDependencies": {
     "@babel/core": "^7.17.2",
     "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.1.3",
     "@rollup/plugin-typescript": "^8.3.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",

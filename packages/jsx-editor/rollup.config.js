@@ -1,8 +1,10 @@
 import { defineConfig } from 'rollup'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+// import { nodeResolve } from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+// import json from '@rollup/plugin-json'
 import typescript from '@rollup/plugin-typescript'
 import postcss from 'rollup-plugin-postcss'
-import commonjs from '@rollup/plugin-commonjs'
 import packageJson from './package.json'
 
 export default defineConfig({
@@ -19,5 +21,13 @@ export default defineConfig({
       sourcemap: true,
     },
   ],
-  plugins: [peerDepsExternal(), typescript(), commonjs(), postcss()],
+  plugins: [
+    peerDepsExternal(),
+    // nodeResolve(),
+    commonjs(),
+    typescript(),
+    // json(),
+    postcss(),
+  ],
+  // external: [...Object.keys(packageJson.dependencies)],
 })
