@@ -4,7 +4,10 @@
   "description": "My graduation project",
   "author": "Grapedge <grapedge@gmail.com>",
   "workspaces": [
-    "packages/*"
+    "app/",
+    "api-driven/*",
+    "ui-builder/*",
+    "sw-esm-pack/*"
   ],
   "scripts": {
     "start": "yarn workspace app dev",
