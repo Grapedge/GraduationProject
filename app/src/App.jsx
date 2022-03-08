@@ -1,3 +1,5 @@
+import GrapesStudio from './features/studio'
+
 export default function App() {
-  return <div className="App"></div>
+  return <GrapesStudio />
 }
