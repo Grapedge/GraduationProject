@@ -9,4 +9,5 @@ const result = babel.transform(`const a = <div>123</div>`, {
   ast: true,
 })
 
+// eslint-disable-next-line no-console
 console.log(JSON.stringify(result.ast))

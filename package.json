@@ -6,7 +6,7 @@
   "workspaces": [
     "app/",
     "api-driven/*",
-    "ui-builder/*",
+    "ui-editor/*",
     "sw-esm-pack/*"
   ],
   "scripts": {
