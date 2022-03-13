@@ -1,6 +1,8 @@
 // import type { PluginObj } from '@babel/core'
 import type { BabelAPI } from '@babel/helper-plugin-utils'
+import type { Visitor } from '@babel/traverse'
 import type { JSXEditorState } from './editor'
+import { AST, Node, NodeId } from './nodes'
 // TODO: 重新设计一下
 
 export type CommandType = string | symbol
@@ -12,18 +14,13 @@ export interface Command<Payload = unknown> {
 
 export interface EditorCommandAPI {
   /**
-   * 此次变换输入的编辑器状态
-   */
-  getInitialEditorState: JSXEditorState
-  /**
    * 提供 Babel API 以供进行 AST 变换
    */
   babelAPI: BabelAPI
-  // appendPlugin: (babelPlugin: PluginObj['visitor']) => void
 }
 
 export interface CommandHandler<Payload = unknown> {
-  (payload: Payload, api: EditorCommandAPI): void
+  traverse: (payload: Payload, api: EditorCommandAPI) => Visitor
 }
 
 export interface GeneratedResult {
