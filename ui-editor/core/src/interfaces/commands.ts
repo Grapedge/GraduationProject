@@ -2,7 +2,7 @@
 import type { BabelAPI } from '@babel/helper-plugin-utils'
 import type { Visitor } from '@babel/traverse'
 import type { JSXEditorState } from './editor'
-import { AST, Node, NodeId } from './nodes'
+// import { AST, Node, NodeId } from './nodes'
 // TODO: 重新设计一下
 
 export type CommandType = string | symbol

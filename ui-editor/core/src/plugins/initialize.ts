@@ -1,17 +1,19 @@
 import { declare } from '@babel/helper-plugin-utils'
-import { nanoid } from 'nanoid'
+import { initNodeId } from '@/utils/nodes'
+import type { NodePath } from '@babel/core'
+import type { Node } from '@babel/types'
 
-const addDesignId = (path: any) => {
-  path.node.designId = nanoid()
+const initNode = (path: NodePath<Node>) => {
+  initNodeId(path.node)
 }
 
-// TODO: 特殊处理一下 <></> 的写法
 // 为节点附加唯一标识
-const initializePlugin = declare(() => ({
+const initialize = declare(() => ({
   visitor: {
-    JSXOpeningElement: addDesignId,
-    JSXOpeningFragment: addDesignId,
+    JSXElement: initNode,
+    JSXFragment: initNode,
+    JSXText: initNode,
   },
 }))
 
-export default initializePlugin
+export default initialize
