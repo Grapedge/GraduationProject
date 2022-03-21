@@ -5,11 +5,11 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'prettier',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jest/recommended',
-    'plugin:react/jsx-runtime',
   ],
   rules: {
     'prettier/prettier': 'error',
