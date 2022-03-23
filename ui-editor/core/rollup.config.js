@@ -17,6 +17,9 @@ export default defineConfig({
       sourcemap: true,
     },
   ],
-  plugins: [commonjs(), typescript()],
-  external: [...Object.keys(packageJson.dependencies)],
+  plugins: [commonjs(), typescript({ tsconfig: './tsconfig.json' })],
+  external: [
+    ...Object.keys(packageJson.dependencies),
+    ...Object.keys(packageJson.peerDependencies),
+  ],
 })

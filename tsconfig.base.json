@@ -3,10 +3,10 @@
     "target": "esnext",
     "lib": ["ESNext"],
     "jsx": "react",
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "declaration": true,
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,
     "allowJs": true,
     "checkJs": true,
     "sourceMap": true,
@@ -15,5 +15,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "exclude": ["**/node_modules"]
+  "exclude": ["**/node_modules", "**/dist"]
 }
