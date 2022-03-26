@@ -1,17 +1,12 @@
-import parse from '@/utils/parse'
-import type { File as AST } from '@babel/types'
+// @ts-nocheck
+import { EditorMethods } from '@/interfaces/editor'
 import initialize from '@/plugins/initialize'
+import parse from '@/utils/parse'
+import { applySpec } from 'ramda'
 
-export interface EditorState {
-  ast: AST
-}
-
-export interface EditorMethods {
-  create: (code: string) => EditorState
-}
-
-const create = (code: string): EditorState => ({
-  ast: parse(code, {
+// TODO: 完善逻辑，处理 Node 元数据
+const create = applySpec({
+  ast: parse({
     plugins: [initialize],
   }),
 })

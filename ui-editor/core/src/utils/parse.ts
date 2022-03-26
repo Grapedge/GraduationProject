@@ -1,11 +1,9 @@
 import { transform } from '@babel/standalone'
 import type { TransformOptions } from '@babel/core'
 import type { File } from '@babel/types'
+import { curry } from 'ramda'
 
-export default function parse(
-  code: string,
-  options: TransformOptions = {}
-): File {
+const parse = curry((options: TransformOptions, code: string): File => {
   return JSON.parse(
     JSON.stringify(
       transform(code, {
@@ -16,4 +14,6 @@ export default function parse(
       }).ast!
     )
   )
-}
+})
+
+export default parse

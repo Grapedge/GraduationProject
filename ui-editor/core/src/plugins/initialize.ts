@@ -1,10 +1,12 @@
 import { declare } from '@babel/helper-plugin-utils'
-import { initNodeId } from '@/utils/nodes'
+import { initNodeId, getNodeId } from '@/utils/nodes'
 import type { NodePath } from '@babel/core'
 import type { Node } from '@babel/types'
 
 const initNode = (path: NodePath<Node>) => {
-  initNodeId(path.node)
+  if (!getNodeId(path.node)) {
+    path.replaceWith(initNodeId(path.node) as any)
+  }
 }
 
 // 为节点附加唯一标识

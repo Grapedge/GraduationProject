@@ -5,17 +5,20 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'prettier',
-    'plugin:react/recommended',
+    // 'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:jest/recommended',
+    // 'plugin:react-hooks/recommended',
+    // 'plugin:jest/recommended',
   ],
   rules: {
     'prettier/prettier': 'error',
     'no-console': 'error',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-ts-comment': {
+      'ts-nocheck': 'off'
+    }
   },
   env: {
     browser: true,

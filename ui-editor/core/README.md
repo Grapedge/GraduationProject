@@ -1,4 +1,6 @@
-# UI Editor Core
+# @ui-editor/core
+
+UI Editor 核心。提供 UI 编辑画布所需的状态、操作。仅涉及编辑器的核心状态，不包含 DOM 等操作。
 
 ## 用例列表
 
@@ -6,6 +8,17 @@
 - [ ] 可以通过拖放的方式调整组件间的顺序
 - [ ] 可以删除组件
 - [ ] 可以从面板拖入组件
+
+## TODOs
+
+- [ ] create(code) => EditorState: 创建编辑器，返回编辑器状态
+- [ ] setProps(nodeId, key, value, state) => EditorState
+- [ ] remove(nodeId, state) => EditorState
+- [ ] getASTNode(nodeId, state) => ASTNode
+- [ ] append(node, parentId, state) => EditorState
+- [ ] before(node, parentId, nodeId, state) => EditorState
+- [ ] after(node, parentId, nodeId, state) => EditorState
+- [ ] ap(...)
 
 ## Core 包技术设计
 
@@ -87,3 +100,7 @@ const NodeRenderer = match(node.type) {
 ```
 
 ... 继续设计一下
+
+## @ts-nocheck
+
+视情况禁用类型检查，这个仓库 ts 检查有点慢，暂不明白原因。

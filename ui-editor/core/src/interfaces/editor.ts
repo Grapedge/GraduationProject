@@ -1,20 +1,17 @@
-import type { Node, NodeId } from './nodes'
+import type { ASTRoot } from './ast'
+import type { NodeMeta } from './nodes'
 
-export interface JSXEditorState {
+export interface EditorState {
   /**
-   * 获得当前的 AST 树
+   * 当前代码的 AST 表示
    */
-  getAST: () => unknown
+  ast: ASTRoot
   /**
-   * 得到当前的源代码文本
+   * 节点信息
    */
-  getSource: () => string
-  /**
-   * 根据 NodeId 查询 Node
-   * @example
-   * const node = editorState.get('nanoid')
-   * // node 可能不存在，注意空值检测
-   * const grandparent = node?.getParent()?.getParent()
-   */
-  getNodeById: (nodeId: NodeId) => Node
+  nodes: Record<string, NodeMeta>
+}
+
+export interface EditorMethods {
+  create: (code: string) => EditorState
 }

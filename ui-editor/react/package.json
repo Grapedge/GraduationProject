@@ -1,5 +1,5 @@
 {
-  "name": "@jsx-editor/core",
+  "name": "@jsx-editor/react",
   "version": "0.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -10,16 +10,10 @@
     "clear": "rimraf dist types",
     "dev": "rollup -cw",
     "build": "yarn clear && rollup -c",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest"
   },
   "dependencies": {
-    "@babel/helper-plugin-utils": "^7.16.7",
-    "@babel/standalone": "^7.17.2",
-    "immer": "^9.0.12",
-    "nanoid": "^3.2.0",
-    "prettier": "^2.5.1",
-    "ramda": "^0.28.0"
+    "immer": "^9.0.12"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -31,7 +25,6 @@
     "@rollup/plugin-typescript": "^8.3.0",
     "@types/babel__helper-plugin-utils": "^7.10.0",
     "@types/babel__standalone": "^7.1.4",
-    "@types/jest": "^27.4.1",
     "@types/ramda": "^0.28.1",
     "@types/react": "^17.0.39",
     "jest": "^27.5.1",
