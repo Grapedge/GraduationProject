@@ -1,4 +1,4 @@
-import type { ASTRoot } from './ast'
+import type { ASTRoot, JSXNode } from './ast'
 import type { NodeId } from './nodes'
 
 export type Path = (string | number)[]
@@ -18,4 +18,5 @@ export interface EditorState {
 
 export interface EditorMethods {
   create: (code: string) => EditorState
+  getNode: (id: NodeId, editor: EditorState) => JSXNode | undefined
 }
