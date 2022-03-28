@@ -1,5 +1,5 @@
-import { ASTNode } from '@/interfaces/ast'
-import { EditorMethods, NodePaths } from '@/interfaces/editor'
+import type { ASTNode } from '@/interfaces/ast'
+import type { EditorMethods, NodePaths } from '@/interfaces/editor'
 import { assocNodeId, createNodeId, getNodeId } from '@/utils/nodes'
 import parse from '@/utils/parse'
 import type { NodePath as BabelNodePath } from '@babel/core'
@@ -32,7 +32,7 @@ const create = (code: string) => {
       JSXText: jsxNodeVisitor,
     },
   }))
-  const ast = parse({ plugins: [initialize] }, code)
+  const ast = JSON.parse(JSON.stringify(parse({ plugins: [initialize] }, code)))
   return {
     ast,
     paths,
