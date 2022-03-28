@@ -19,3 +19,11 @@ SDU 毕业设计项目。
 - ui-builder: UI 构建器
 - sw-esm-pack: React 代码构建预览
 - server: 应用服务器
+
+## 开发
+
+安装依赖：
+
+```bash
+yarn bootstrap
+```

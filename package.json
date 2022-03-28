@@ -4,6 +4,7 @@
   "description": "My graduation project",
   "author": "Grapedge <grapedge@gmail.com>",
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "start": "yarn workspace app dev",
     "build": "yarn workspaces run build",
     "lint": "eslint . --ext ",
