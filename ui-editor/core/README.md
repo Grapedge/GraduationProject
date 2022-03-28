@@ -104,3 +104,4 @@ const NodeRenderer = match(node.type) {
 ## @ts-nocheck
 
 视情况禁用类型检查，这个仓库 ts 检查有点慢，暂不明白原因。
+感觉应该和 yarn workspaces 或者 node_modules 提升有关，换用 lerna 后不卡顿了。

@@ -9,6 +9,7 @@
     "emitDeclarationOnly": false,
     "allowJs": true,
     "checkJs": false,
+    "noImplicitAny": false,
     "sourceMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

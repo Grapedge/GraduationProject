@@ -1,6 +1,7 @@
+import type { File as ASTRoot, Node as ASTNode } from '@babel/types'
 export type {
-  File as ASTRoot,
   JSX as JSXNode,
+  Node,
   JSXAttribute,
   JSXClosingElement,
   JSXElement,
@@ -17,3 +18,9 @@ export type {
   JSXSpreadChild,
   JSXText,
 } from '@babel/types'
+
+export type { ASTRoot, ASTNode }
+
+export interface ASTMethods {
+  get: <Node extends ASTNode = ASTNode>(path: string[], ast: ASTRoot) => Node
+}

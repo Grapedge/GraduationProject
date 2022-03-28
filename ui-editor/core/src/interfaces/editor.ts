@@ -1,5 +1,9 @@
 import type { ASTRoot } from './ast'
-import type { NodeMeta } from './nodes'
+import type { NodeId } from './nodes'
+
+export type Path = (string | number)[]
+
+export type NodePaths = Record<NodeId, Path>
 
 export interface EditorState {
   /**
@@ -7,9 +11,9 @@ export interface EditorState {
    */
   ast: ASTRoot
   /**
-   * 节点信息
+   * 所有 Node 对应的 AST 路径
    */
-  nodes: Record<string, NodeMeta>
+  paths: NodePaths
 }
 
 export interface EditorMethods {

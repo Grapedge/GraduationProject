@@ -13,9 +13,9 @@ export type NodeId = string
  */
 
 /**
- * Node 元信息
+ * Node 路径信息
  */
-export interface NodeMeta {
+export interface NodePath {
   /**
    * Node 唯一标识
    */
@@ -26,4 +26,6 @@ export interface NodeMeta {
   path: string[]
 }
 
-export interface NodeMethods {}
+export interface NodePathMethods {
+  create: (path: string[]) => NodePath
+}
