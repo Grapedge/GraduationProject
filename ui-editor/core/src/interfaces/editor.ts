@@ -19,4 +19,5 @@ export interface EditorState {
 export interface EditorMethods {
   create: (code: string) => EditorState
   getNode: (id: NodeId, editor: EditorState) => JSXNode | undefined
+  render: (options: {}, editor: EditorState) => string
 }

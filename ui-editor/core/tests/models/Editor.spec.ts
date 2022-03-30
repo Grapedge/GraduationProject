@@ -17,7 +17,7 @@ const App = () => {
 `
 
 describe('Editor.create', () => {
-  test.only('the code should be parsed as an AST', () => {
+  test('the code should be parsed as an AST', () => {
     const state = Editor.create(reactCode)
     expect(state.ast).toBeDefined()
     expect(state.paths).toBeDefined()
@@ -32,5 +32,13 @@ describe('Editor.create', () => {
         'JSXExpressionContainer',
       ]).toContain(node.type)
     })
+  })
+})
+
+describe('Editor.render', () => {
+  test('render code test', () => {
+    const state = Editor.create(reactCode)
+    const result = Editor.render({}, state)
+    expect(result).toBeDefined()
   })
 })

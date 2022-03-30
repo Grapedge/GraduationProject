@@ -105,3 +105,9 @@ const NodeRenderer = match(node.type) {
 
 视情况禁用类型检查，这个仓库 ts 检查有点慢，暂不明白原因。
 感觉应该和 yarn workspaces 或者 node_modules 提升有关，换用 lerna 后不卡顿了。
+
+关于写一行代码 ts 能检查上一分钟这件事.jpg
+
+可能是 ramda ts 支持不太好...等有空学下 fp-ts 看看...
+
+如果写着写着这个项目变成 js 的我一点都不奇怪。

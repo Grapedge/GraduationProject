@@ -1,10 +1,11 @@
 import type { ASTNode } from '@/interfaces/ast'
-import type { EditorMethods, NodePaths } from '@/interfaces/editor'
+import type { EditorMethods, EditorState, NodePaths } from '@/interfaces/editor'
 import { assocNodeId, createNodeId, getNodeId } from '@/utils/nodes'
-import parse from '@/utils/parse'
+import { parse, transform, transformFromAST } from '@/utils/babel'
 import type { NodePath as BabelNodePath } from '@babel/core'
 import { declare } from '@babel/helper-plugin-utils'
 import { compose, invoker, replace, split } from 'ramda'
+import renderPlugin from './babelPlugins/render'
 
 const create = (code: string) => {
   const paths: NodePaths = Object.create(null)
@@ -39,8 +40,20 @@ const create = (code: string) => {
   }
 }
 
+const render = (options = {}, editor: EditorState) => {
+  const result = transformFromAST(
+    {
+      plugins: [renderPlugin],
+    },
+    undefined,
+    editor.ast
+  )
+  return result.code
+}
+
 const Editor: EditorMethods = {
   create,
+  render,
 } as any
 
 export default Editor
