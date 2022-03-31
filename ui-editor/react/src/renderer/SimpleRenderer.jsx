@@ -4,8 +4,9 @@
 // 注入 NodeProvider
 // 将代码进行渲染
 import React from 'react'
-import { append, constructN, join, pipe, __ } from 'ramda'
+import { append, constructN, join, pipe, prepend, __ } from 'ramda'
 import { NodeProvider } from '../nodes'
+import { Table } from 'antd'
 
 // new Function: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function
 
