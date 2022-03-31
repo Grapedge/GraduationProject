@@ -1,10 +1,13 @@
 import { defineConfig } from 'rollup'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import { babel } from '@rollup/plugin-babel'
 import packageJson from './package.json'
 
+const extensions = ['.js', '.jsx', '.mjs']
+
 export default defineConfig({
-  input: 'src/index.ts',
+  input: 'src/index.js',
   output: [
     {
       file: packageJson.main,
@@ -17,7 +20,15 @@ export default defineConfig({
       sourcemap: true,
     },
   ],
-  plugins: [commonjs(), typescript({ tsconfig: './tsconfig.json' })],
+  plugins: [
+    nodeResolve({ extensions }),
+    commonjs(),
+    babel({
+      extensions,
+      exclude: 'node_modules/**',
+      presets: ['@babel/preset-react'],
+    }),
+  ],
   external: [
     ...Object.keys(packageJson.dependencies),
     ...Object.keys(packageJson.peerDependencies),
