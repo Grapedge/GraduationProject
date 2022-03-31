@@ -1,5 +1,5 @@
 {
-  "packages": ["app/", "api-driven/*", "ui-editor/*", "sw-esm-pack/*"],
+  "packages": ["app", "api-driven/*", "ui-editor/*", "sw-esm-pack/*"],
   "version": "0.0.0",
   "npmClient": "yarn"
 }
