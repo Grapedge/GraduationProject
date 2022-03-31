@@ -1,7 +1,7 @@
-import { Editor } from '@/models'
-import { getNodeId } from '@/utils/nodes'
+import { Editor } from '../../src/models'
+import { getNodeId } from '../../src/utils/nodes'
 import { path } from 'ramda'
-import type { ASTNode } from '@/interfaces/ast'
+import type { ASTNode } from '../../src/interfaces/ast'
 
 const reactCode = `
 import React from 'react'

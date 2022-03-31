@@ -11,13 +11,8 @@ export default defineConfig({
       format: 'cjs',
       sourcemap: true,
     },
-    {
-      file: packageJson.module,
-      format: 'esm',
-      sourcemap: true,
-    },
   ],
-  plugins: [commonjs(), typescript({ tsconfig: './tsconfig.json' })],
+  plugins: [commonjs(), typescript({ tsconfig: './tsconfig.build.json' })],
   external: [
     ...Object.keys(packageJson.dependencies),
     ...Object.keys(packageJson.peerDependencies),

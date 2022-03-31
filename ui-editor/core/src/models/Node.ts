@@ -1,7 +1,5 @@
 // @ts-nocheck
-import { ASTRoot, JSXElement } from '@/interfaces/ast'
-import { Path } from '@/interfaces/editor'
-import { NodeMethods } from '@/interfaces/nodes'
+import { NodeMethods } from '../interfaces/nodes'
 import {
   compose,
   find,

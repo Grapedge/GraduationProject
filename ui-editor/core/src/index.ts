@@ -1,1 +1,2 @@
-export { default as Editor } from './models/Editor'
+export { EditorState } from './interfaces/editor'
+export * from './models'

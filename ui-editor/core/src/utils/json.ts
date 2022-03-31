@@ -1,3 +1,3 @@
-import { compose } from 'ramda'
+import { compose, unary } from 'ramda'
 
-export const toPlainObj = compose(JSON.parse, JSON.stringify)
+export const toPlainObj = compose(unary(JSON.parse), unary(JSON.stringify))

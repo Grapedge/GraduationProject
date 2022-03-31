@@ -1,7 +1,7 @@
-import { ASTRoot } from '@/interfaces/ast'
+import { ASTRoot } from '../interfaces/ast'
 import type { TransformOptions } from '@babel/core'
 import * as babel from '@babel/standalone'
-import { compose, concat, curry, evolve, mergeLeft, when } from 'ramda'
+import { concat, curry, evolve, mergeLeft, when } from 'ramda'
 import { toPlainObj } from './json'
 
 const defaultPlugins = ['syntax-jsx']

@@ -12,7 +12,7 @@ import {
   props,
   unary,
 } from 'ramda'
-import { getNodeId } from '@/utils/nodes'
+import { getNodeId } from '../../utils/nodes'
 
 const WRAPPER_COMPONENT = 'NodeProvider'
 

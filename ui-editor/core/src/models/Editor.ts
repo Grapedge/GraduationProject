@@ -1,7 +1,11 @@
-import type { ASTNode } from '@/interfaces/ast'
-import type { EditorMethods, EditorState, NodePaths } from '@/interfaces/editor'
-import { assocNodeId, createNodeId, getNodeId } from '@/utils/nodes'
-import { parse, transform, transformFromAST } from '@/utils/babel'
+import type { ASTNode } from '../interfaces/ast'
+import type {
+  EditorMethods,
+  EditorState,
+  NodePaths,
+} from '../interfaces/editor'
+import { assocNodeId, createNodeId, getNodeId } from '../utils/nodes'
+import { parse, transform, transformFromAST } from '../utils/babel'
 import type { NodePath as BabelNodePath } from '@babel/core'
 import { declare } from '@babel/helper-plugin-utils'
 import { compose, invoker, replace, split } from 'ramda'

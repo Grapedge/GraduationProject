@@ -5,7 +5,10 @@ export const JSX_NODE_ID = '__jsx_id'
 
 export const assocNodeId = assoc(JSX_NODE_ID)
 
-export const getNodeId = (node: any): string | undefined =>
-  prop(JSX_NODE_ID)(node)
+/**
+ * hello
+ * @type {(node: any) => string}
+ */
+export const getNodeId = prop(JSX_NODE_ID)
 
 export const createNodeId = nanoid
