@@ -1130,6 +1130,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@mobily/ts-belt@^3.10.0":
+  version "3.10.0"
+  resolved "https://registry.npmmirror.com/@mobily/ts-belt/-/ts-belt-3.10.0.tgz#bf264493420e47a6f95e592056de9957513d990a"
+  integrity sha512-F3XLU3zMDzJOf9KlKgnNOz5rdAtMG/UBxEDU4UNA4ewKFRd5DsbIIJmeAifLudNwcXmoIgtZ39KwVjPaL/CjgA==
+
 "@mui/base@5.0.0-alpha.73":
   version "5.0.0-alpha.73"
   resolved "https://registry.npmmirror.com/@mui/base/-/base-5.0.0-alpha.73.tgz#1b5bc60d31eb2b374516c4f3bae2835f94510169"

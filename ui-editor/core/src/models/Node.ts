@@ -10,8 +10,9 @@ import {
   useWith,
   when,
 } from 'ramda'
+import { A, D } from '@mobily/ts-belt'
 
-const get = path
+const get = A.reduce(paths, obj, (x, y) => get(y, x))
 const getType = prop('type')
 const getProps = path(['openingElement', 'attributes'])
 

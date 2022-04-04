@@ -1215,6 +1215,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@mobily/ts-belt@^3.10.0":
+  version "3.10.0"
+  resolved "https://registry.npmmirror.com/@mobily/ts-belt/-/ts-belt-3.10.0.tgz#bf264493420e47a6f95e592056de9957513d990a"
+  integrity sha512-F3XLU3zMDzJOf9KlKgnNOz5rdAtMG/UBxEDU4UNA4ewKFRd5DsbIIJmeAifLudNwcXmoIgtZ39KwVjPaL/CjgA==
+
 "@reduxjs/toolkit@^1.8.1":
   version "1.8.1"
   resolved "https://registry.npmmirror.com/@reduxjs/toolkit/-/toolkit-1.8.1.tgz#94ee1981b8cf9227cda40163a04704a9544c9a9f"

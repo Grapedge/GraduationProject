@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@jsx-editor/core": "^0.0.0",
+    "@mobily/ts-belt": "^3.10.0",
     "@reduxjs/toolkit": "^1.8.1",
     "antd": "^4.19.3",
     "immer": "^9.0.12",

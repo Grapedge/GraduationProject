@@ -12,6 +12,7 @@
     "@emotion/styled": "^11.8.1",
     "@jsx-editor/core": "^0.0.0",
     "@jsx-editor/react": "^0.0.0",
+    "@mobily/ts-belt": "^3.10.0",
     "@mui/icons-material": "^5.5.0",
     "@mui/material": "^5.5.0",
     "antd": "^4.19.3",

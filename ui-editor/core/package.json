@@ -15,6 +15,7 @@
   "dependencies": {
     "@babel/helper-plugin-utils": "^7.16.7",
     "@babel/standalone": "^7.17.2",
+    "@mobily/ts-belt": "^3.10.0",
     "immer": "^9.0.12",
     "nanoid": "^3.2.0",
     "prettier": "^2.5.1",
